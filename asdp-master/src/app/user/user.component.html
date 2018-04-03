@@ -1,0 +1,145 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 col-md-5">
+            <div class="card card-user">
+                <div class="image">
+                    <img src="assets/img/background.jpg" />
+                </div>
+                <div class="content" style="background-color: #1f2833">
+                    <div class="author">
+                        <img class="avatar border-white" src="assets/img/faces/face-2.jpg" />
+                        <h4 class="title" style="color: #4ec5db ">{{first_name}} {{last_name}} <br />
+                            <a href="#"><small>@ {{username}}</small></a>
+                        </h4>
+                    </div>
+                    <p class="description text-center" style="color: #4ec5db ">
+                        <b> Group number: </b> CR/APA3
+                        <br>
+                        <span style="color: #435770 "> Fixed-term  </span>
+                    </p>
+                </div>
+                <div  style="background-color: #1f2833" >
+                    <div class="text-center" style="opacity:0.8; background-color: white">
+                            <h5 class="title " style="color: #435770 "> MY ADDRESS:
+                            </h5>
+                            <h6   style="color: #1f2833; margin: 2%; margin-top:5%">
+                                {{address}}
+                            </h6>
+                            <h5 style="color: #1f2833; margin: 2% "> {{city}} {{postcode}} </h5>
+                            <h4 style="color: #1f2833; margin: 2%; padding-bottom:2% ">
+                                {{country}}
+                            </h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="text-center" style="border: #435770 3px ">
+                    <div class="row">
+                        <p stylle="margin:3%"> {{phone}} </p>
+                        <p stylle="margin:3%"> {{about_me}} </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-8 col-md-7">
+            <div class="card" style="background-color:  #1f2833 ">
+                <div class="header">
+                    <h4 class="title" style="color: #4ec5db ">Edit Profile</h4>
+                </div>
+                <div class="content">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">Department</label>
+                                    <input type="text" class="form-control" style="background-color:#c3eff7" disabled placeholder="Department" value="CR/APA3">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label style="color: #4edbc6 ">Username</label>
+                                    <input type="text" class="form-control " style="background-color:#b7fff4" placeholder="Username" [value]="username" (input)="username = $event.target.value">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" style="color:#5ee0ae">Email address</label>
+                                    <input type="email" class="form-control " style="background-color:#bcffe5" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">First Name</label>
+                                    <input type="text" class="form-control " style="background-color:#c3eff7" placeholder="Company"  [value]="first_name" (input)="first_name = $event.target.value">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="color: #4edbc6 ">Last Name</label>
+                                    <input type="text" class="form-control t" style="background-color:#bcffe5" placeholder="Last Name"  [value]="last_name" (input)="last_name = $event.target.value">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">Address</label>
+                                    <input type="text" class="form-control " style="background-color:#c3eff7" placeholder="Home Address"  [value]="address" (input)="address = $event.target.value">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">City</label>
+                                    <input type="text" class="form-control " style="background-color:#c3eff7" placeholder="City"   [value]="city" (input)="city = $event.target.value">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="color: #4edbc6 ">Country</label>
+                                    <input type="text" class="form-control " style="background-color:#b7fff4" placeholder="Country" [value]="country" (input)="country = $event.target.value">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label style="color:#5ee0ae">Postal Code</label>
+                                    <input type="number" class="form-control " style="background-color:#bcffe5" placeholder="ZIP Code"  [value]="postcode" (input)="postcode = $event.target.value">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">Phone number</label>
+                                    <input type="text" class="form-control " style="background-color:#c3eff7" placeholder="Phone number" [value]="phone" (input)="phone = $event.target.value">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label style="color: #4ec5db ">About Me</label>
+                                    <textarea rows="3" class="form-control " style="background-color:#c3eff7" placeholder="Here can be your description"  [value]="about_me" (input)="about_me = $event.target.value">
+                                          
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-info btn-fill btn-wd"  >Update Profile</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

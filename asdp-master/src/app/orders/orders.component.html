@@ -1,0 +1,87 @@
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="background-color: #1f2833">
+                    
+                  
+                    <div class="container-fluid" style="padding-left:2%; padding-right: 2%">
+                    <form>
+                            <div style="padding:1%">
+                                    <h3 class="title" style="color: white; border-bottom: solid white ">CLIENT INFORMATION</h3>
+                                    <p class="category">Write information about your <a style="color:#4ec5db" >client</a>.</p>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label style="color: #4ec5db ">First Name</label>
+                                        <input type="text" class="form-control" style="background-color:#c3eff7"   [value]="first" (input)="first = $event.target.value">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label style="color: #4edbc6 ">Last Name</label>
+                                        <input type="text" class="form-control " style="background-color:#b7fff4" [value]="last" (input)="last = $event.target.value">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" style="color:#5ee0ae">Phone number</label>
+                                        <input type="email" class="form-control " style="background-color:#bcffe5"  [value]="phone" (input)="phone = $event.target.value">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label style="color: #4ec5db ">Address</label>
+                                            <input type="text" class="form-control" style="background-color:#c3eff7" [value]="address" (input)="address = $event.target.value">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label style="color: #4edbc6 ">ZIP Code</label>
+                                            <input type="text" class="form-control " style="background-color:#b7fff4"  [value]="zip" (input)="zip = $event.target.value">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1" style="color:#5ee0ae">City</label>
+                                            <input type="email" class="form-control " style="background-color:#bcffe5" [value]="city" (input)="city = $event.target.value">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding:1%">
+                                <h3 class="title" style="color: white; border-bottom: solid white ">ORDER INFORMATION</h3>
+                                <p class="category">Write information about the <a style="color:#4ec5db" >order</a>.</p>
+                            </div>
+                                <div class="row">
+                                     
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label style="color: #4edbc6 ">Name of the product</label>
+                                                <input type="text" class="form-control " style="background-color:#b7fff4" [value]="product" (input)="product = $event.target.value">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1" style="color:#5ee0ae">Number of products</label>
+                                                <input type="email" class="form-control " style="background-color:#bcffe5" [value]="number" (input)="number = $event.target.value">
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <label style="color: #4ec5db ">Additional information</label>
+                                    <textarea rows="5" class="form-control " style="background-color:#c3eff7; margin-bottom: 3%"  [value]=info (input)="info = $event.target.value">
+                                         
+                                    </textarea>
+                                    <div class="text-center">
+                                            <button  class="btn btn-info btn-fill btn-wd" style="margin-bottom:3%" (click)="send(first, last, phone, address, zip, city, product, number, info)">ADD ORDER</button>
+                                        </div>
+                            
+                    </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

@@ -1,0 +1,14 @@
+<div class="sidebar-wrapper" style="background-color: #1f2833">
+    <div class="text-center">
+        <h3 style="margin:5%" style="color: #4ec5db; border-bottom: 2px solid #4ec5db"> Workflow Manager</h3>
+    </div>
+    <ul class="nav">
+        <li class="divider"></li>
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i style="color: #4ec5db" class="{{menuItem.icon}}"></i>
+                <p style="color: #4ec5db">{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

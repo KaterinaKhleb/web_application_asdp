@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card" style="background-color: #1f2833">
+                <div class="header">
+                    <h4 class="title" style="color:white; border-bottom: solid white">Analytic table of employees productivity:</h4>
+                </div>
+                <div class="content table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="color:white" *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let row of tableData1.dataRows">
+                                <td *ngFor="let cell of row">{{cell}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
